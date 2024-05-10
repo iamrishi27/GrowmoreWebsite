@@ -195,3 +195,74 @@ h5{
       }
     }
 
+    .portfolio-container{
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80%;
+        margin-bottom: 1.875pc;
+        margin-top: 1.875pc;
+        grid-template-columns: repeat(3,1fr);
+        gap: 60px;
+        box-sizing: border-box;
+    }
+    .card{
+        width: 150px;
+        height: 200px;
+        perspective: 1000px;
+        margin: 10px;
+        
+    }
+    .card div{
+        height: 92%;
+        width: 175%;
+        position: absolute;
+        backface-visibility: hidden;
+    }
+
+    .front{
+        background-color: gray;
+        color: white;
+     
+        transition: transform 0.5s;
+    }
+
+    .back{
+        background-color: brown;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        cursor: pointer;
+        transform: rotateY(180deg);
+        transition: transform 0.5s;
+    }
+
+    .card:hover .front{
+        transform: rotateY(180deg);
+    }
+    .card:hover .back{
+        transform: rotateY(0deg);
+    }
+
+    .back img{
+        height: 200px;
+        width: 300px;
+    }
+
+    .front{
+        height: 200px;
+        width: 300px;
+    }
+    .h2{
+        text-align: center;
+    }
+    .pa{
+        text-align: center;
+    }
+
+  
+
